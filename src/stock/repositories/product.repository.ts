@@ -1,4 +1,4 @@
-import { IProduct } from '../models/product.interface';
+import { IProduct } from '../schemas/models/product.interface';
 
 export abstract class ProductRepository {
   abstract getAllStock(limit: number, page: number): Promise<IProduct[]>;
