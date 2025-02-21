@@ -21,6 +21,7 @@ export class ProductMongooseRepository implements ProductRepository {
   }
   async createStock(product: IProduct): Promise<void> {
     const createStock = new this.productModel(product);
+    await createStock.save();
   }
   async updateStock(productId: string, stock: number): Promise<void> {
     await this.productModel
